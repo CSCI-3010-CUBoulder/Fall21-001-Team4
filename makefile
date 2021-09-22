@@ -3,7 +3,7 @@ CXXFLAGS	= -std=c++17 -Wall
 all: test
 
 clean:
-	rm test1.o
+	rm test
 
 test:  test.cpp
-	$(CXX) $(CXXFLAGS) test.cpp  -o test1
+	$(CXX) $(CXXFLAGS) test.cpp  -o test
