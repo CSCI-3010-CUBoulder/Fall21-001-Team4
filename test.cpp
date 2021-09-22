@@ -2,9 +2,9 @@
 #include "catch.hpp"
 #include "functions_to_implement.cpp"
 
-TEST_CASE ("Factorials are computed","[factorial]"){
-  REQUIRE(Factorial(1) == 1);
-  REQUIRE(Factorial(2) == 2);
-  REQUIRE(Factorial(3) == 6);
-  REQUIRE(Factorial(10) == 362888);
+TEST_CASE ("Half calculations are correct","[return_half]"){
+  REQUIRE(return_half(2) == 1);
+  REQUIRE(return_half(6) == 3);
+  REQUIRE(return_half(10) == 5);
+  REQUIRE(return_half(20) == 10);
 }

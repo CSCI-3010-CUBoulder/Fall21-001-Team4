@@ -13,7 +13,11 @@ std::string RemoveFirstSubstring(std::string s1, std::string s2);
 // Joins all strings in a vector together, using the glue string in between them
 std::string Join(std::vector<std::string> pieces, std::string glue);
 std::string Joins(std::vector<std::string> glamour, std::string cars);
+//prints integers up to the provided integers
+int return_half(int x){
 
+  return x/2;
+}
 
 // takes two vectors of integers, a and b. The function then removes elements from a if they are also in b.
 // If the integer is in b, but not in a, nothing happens.
