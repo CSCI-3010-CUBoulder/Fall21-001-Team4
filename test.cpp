@@ -9,6 +9,9 @@ TEST_CASE ("Half calculations are correct","[return_half]"){
   REQUIRE(return_half(10) == 5);
   REQUIRE(return_half(20) == 10);
 }
+TEST_CASE ("Half calculations are correct","[return_half]"){
+  REQUIRE(return_half(600) == 300);
+}
 
 TEST_CASE( "vectors can be sized and resized", "[vector]" ) {
 
