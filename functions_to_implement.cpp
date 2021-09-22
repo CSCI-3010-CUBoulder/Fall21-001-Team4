@@ -1,3 +1,4 @@
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -75,7 +76,20 @@ std::vector<bool> GreaterMask(std::vector<double> nums, double greater_than);
 std::vector<bool> LessMask(std::vector<double> nums, double less_than);
 
 // returns a vector with true for numbers greater than the second parameters and false for those less than or equal to
-std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
+std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than){
+  std::vector<bool> truefalse;
+  for (int i = 0; i < nums.size(); i++){
+    bool temp;
+    if (nums[i] > greater_than){
+      temp = true;
+      truefalse.push_back(temp);
+    }
+    else{
+      temp = false;
+      truefalse.push_back(temp);
+    }
+  }
+};
 
 // returns a vector with true for numbers less than the second parameters and false for those greater than or equal to
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
