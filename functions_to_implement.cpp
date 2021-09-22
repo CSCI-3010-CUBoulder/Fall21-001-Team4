@@ -1,3 +1,4 @@
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -11,13 +12,15 @@ std::string RemoveAllSubstrings(std::string s1, std::string s2);
 std::string RemoveFirstSubstring(std::string s1, std::string s2);
 
 // Joins all strings in a vector together, using the glue string in between them
-std::string Join(std::vector<std::string> pieces, std::string glue);
-std::string Joins(std::vector<std::string> glamour, std::string cars);
-
+std::string Join(std::vector<std::string> pieces, std::string glue){
+//making the strings join on the glue string here
+};
 
 // takes two vectors of integers, a and b. The function then removes elements from a if they are also in b.
 // If the integer is in b, but not in a, nothing happens.
-std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
+std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b){
+//iterates through the two vectors simultaneously. If the loop finds that vector a shares an int with vector b, it deletes every occurence of that
+};
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
@@ -74,7 +77,21 @@ std::vector<bool> GreaterMask(std::vector<double> nums, double greater_than);
 std::vector<bool> LessMask(std::vector<double> nums, double less_than);
 
 // returns a vector with true for numbers greater than the second parameters and false for those less than or equal to
-std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
+std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than){
+  std::vector<bool> truefalse;
+  for (int i = 0; i < nums.size(); i++){
+    bool temp;
+    if (nums[i] > greater_than){
+      temp = true;
+      truefalse.push_back(temp);
+    }
+    else{
+      temp = false;
+      truefalse.push_back(temp);
+    }
+  }
+  return truefalse;
+};
 
 // returns a vector with true for numbers less than the second parameters and false for those greater than or equal to
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
